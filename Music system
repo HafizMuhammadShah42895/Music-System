@@ -1,0 +1,1090 @@
+#include<iostream>
+#include<conio.h>
+#include<string>
+#include<fstream>
+#include<stdlib.h>  
+#include<cstdio>
+using namespace std;
+struct newmusic{      //structure for further data inclusion
+	string genre,artist,albumname;
+	int tracklist,isle,price;	
+	float metricscore;
+};
+newmusic e[100];                                      //array for the structure
+int total=0; 
+
+    
+int hiphop(){                                         //hiphop customer function including default options for customers
+	system("color 0A");                               //terminal color cahnge function
+     int hhartist;                                   //variable for hiphop artists
+     int kl,kw,dd;                                   //variables for rapper initials
+     char sc[2]={'y','n'};                                       //small array for yes or no
+     hiphop:                                           //goto function for hiphop section
+  cout<<"SELECT ARTIST YOU PREFER"<<endl;
+  cout<<"=======================================================================================================================\n\n"<<endl;
+        cout<<"1. Kendrick Lamar"<<endl<<endl;
+        cout<<"       2. Kanye West"<<endl<<endl;
+        cout<<"            3. DR. DRE\n\n"<<endl<<endl;
+
+        cin>>hhartist;                                  
+         system("CLS");                                   //clearscreen functiom
+        switch(hhartist){
+            case 1:
+            cout<<"ENTER THE ALBUM YOU WANT:"<<endl<<endl;
+            cout<<"=================================================================================================================="<<endl<<endl;
+            cout<<"1. OVERLYDEDICATED "<<endl<<endl;
+            cout<<"       2. SECTION.80"<<endl<<endl;
+            cout<<"            3. DAMN."<<endl<<endl;
+          
+            cin>>kl;
+            system("CLS");
+            if(kl== 1 ){                                          //condition showing album description from artist
+            	cout<<"DESCRIPTION OF ALBUM:  "<<endl;
+            	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+            	cout<<"METRIC SCORE = 8.9\n\n"<<endl<<endl;          //score given by critique
+            	cout<<"SONGS LIST = 13"<<endl<<endl;
+            	cout<<"PRICE OF PER VINYL CD = 1800 RS"<<endl<<endl;
+            	
+            	cout<<"ENTER  'Y'  IF YOU WANT IF NOT TYPE  'N'  "<<endl;   //options to buy
+            	cin>>sc[2];
+            	if(sc[2] == 'y'){
+            		
+            		cout<<"THANK YOU FOR BUYING, HOPE YOU ENJOY GOOD MUSIC"<<endl;
+            		
+            		
+				}
+				else if(sc[2] == 'n'){
+					cout<<"--------------------------------------------------------------------------------------------------------------"<<endl;
+					cout<<"ITS FINE IF ITS NOT YOUR TASTE, HOPE YOU LIKE ANOTHER ONE"<<endl<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;                           //goto function for hiphop screen
+				}
+                		else{
+                			cout<<"\aERROR \n\n"<<endl<<endl;        
+                			cout<<" GOING BACK IN 3,2,1  "<<endl<<endl;
+                			system("pause");                                //system pausing function
+                			system("CLS");                         
+                			goto hiphop;
+						}
+						}
+					
+            else if(kl== 2 ){                                           //KL initials for rapper name
+            	cout<<"DESCRIPTION OF ALBUM:  "<<endl<<endl;
+            	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+            	cout<<"SONGS LIST = 11"<<endl<<endl;
+            	cout<<"METRIC SCORE = 8.2\n\n"<<endl;
+            	
+            cout<<"PRICE OF PER VINYL CD IS : 1800 RS"<<endl;
+            	
+            	
+            	cout<<"ENTER YES IF YOU WANT IF NOT TYPE NO"<<endl;
+            	cin>>sc[2];
+            	if(sc[2]== 'y' ){
+            		cout<<"THANK YOU FOR BUYING, HOPE YOU ENJOY GOOD MUSIC"<<endl;}
+            		else if(sc[2] == 'n'){
+            			cout<<"ITS FINE IF ITS NOT YOUR TASTE, HOPE YOU LIKE SOMETING ELSE"<<endl<<endl;
+            			goto hiphop;
+            		}
+            			else{
+            				cout<<"ERROR Detected"<<endl;
+            				system("pause");
+            				system("CLS");
+            				goto hiphop;
+						}
+					}
+					else if(kl==3){
+						
+						cout<<"DESCRIPTION OF ALBUM:"<<endl<<endl;
+						cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+						cout<<"METRIC SCORE: 8.9\n\n"<<endl<<endl;
+						cout<<"SONGS LIST = 12"<<endl<<endl;
+						cout<<"PRICE FOR PER VINYL CD IS : 2500 RS"<<endl;
+						cout<<"ENTER Y IF YOU WANT TO BUY. ENTER N IF YOU DON'T WANT TO BUY"<<endl;
+						cin>>sc[2];
+						if(sc[2] == 'y'){
+							cout<<"THANK YOU ENJOY ONE OF THE BEST ALBUMS IN HIPHOP"<<endl<<endl;
+							cout<<"LOCATION = ISLE 1ST"<<endl<<endl;
+							
+						}else if(sc[2] == 'n'){
+							
+							cout<<"ITS OKAY IF ITS NOT YOUR TASTE"<<endl;
+							system("pause");
+							system("CLS");
+							goto hiphop;
+						}
+					}
+					else{
+           	cout<<"SEVERE Error"<<endl;
+		   }
+            break;
+            
+            case 2:                                          //case 2 meaning rapper number 2
+            cout<<" ENTER THE ALBUM YOU WANT  "<<endl;
+            cout<<"--------------------------------------------------------------------------------------------------------------"<<endl<<endl;
+            cout<<"1. DONDA"<<endl<<endl;
+			cout<<"       2. GRADUATION"<<endl<<endl;
+			cout<<"            3. LATE REGISTRATION"<<endl<<endl;
+			
+			cin>> kw;
+			system("CLS");
+			if(kw == 1){
+				cout<<"DESCRIPTION :"<<endl;
+				cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+				cout<<"SONGS LIST : 15"<<endl<<endl;
+				cout<<"METRIC SCORE: 8.3"<<endl<<endl;
+				cout<<"PRICE = 1800 RS\n"<<endl<<endl;
+				cout<<"PRESS 'y' if you want to buy 'n' if you don't"<<endl<<endl;
+				cin>>sc[2];
+				system("CLS");
+				if(sc[2]=='y'){
+					cout<<"THANK YOU FOR BUYING\n"<<endl;
+					cout<<"YOU CAN FIND ALBUM ON ISLE 1st\n"<<endl;
+					cout<<"PROCEED TO CHECKOUT WITH 1800 RS\n"<<endl;	
+				}
+				else if(sc[2]=='n'){
+					cout<<"ITS FINE YOU CAN ALWAYS FIND ANOTHER ALBUM"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+				else{
+					cout<<"ERROR DETECTED"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+			}           
+            else if(kw == 2){
+            	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+            	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+            	cout<<"SONGS LIST : 11"<<endl<<endl;
+            	cout<<"METRIC SCORE = 9.4"<<endl<<endl;
+            	cout<<"PRICE = 2000 RS"<<endl<<endl;
+            	cout<<"PRESS 'y' TO BUY 'n' TO GO BACK"<<endl<<endl;
+            	cin>> sc[2];
+            	system("CLS");
+			
+            	if(sc[2]=='y'){
+					cout<<"THANK YOU FOR BUYING"<<endl;
+					cout<<"YOU CAN FIND ALBUM ON ISLE 1st"<<endl;
+					cout<<"PROCEED TO CHECKOUT WITH 2000 RS"<<endl;	
+				}
+				else if(sc[2]=='n'){
+					cout<<"ITS FINE YOU CAN ALWAYS FIND ANOTHER ALBUM"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+				else{
+					cout<<"ERROR DETECTED"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+			}
+				
+            
+            else if(kw == 3){
+            	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+            	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+            	cout<<"SONGS LIST : 14"<<endl<<endl;
+            	cout<<"METRIC SCORE = 9.1"<<endl<<endl;
+            	cout<<"PRESS 'y' TO BUY 'n' TO GO BACK"<<endl<<endl;
+            	cin>>sc[2];
+            	system("CLS");
+            		if(sc[2]=='y'){
+					cout<<"THANK YOU FOR BUYING"<<endl;
+					cout<<"YOU CAN FIND ALBUM ON ISLE 1st"<<endl;
+					cout<<"PROCEED TO CHECKOUT WITH 1800 RS"<<endl;	
+				}
+				else if(sc[2]=='n'){
+					cout<<"ITS FINE YOU CAN ALWAYS FIND ANOTHER ALBUM"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+				else{
+					cout<<"ERROR DETECTED"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+			}
+			break;
+			
+		   case 3:                                             //case 3 Third album started
+		   cout<<"ENTER THE ALBUM YOU WANT"<<endl;
+		   cout<<"-----------------------------------------------------------------------------------------------------------------------\n\n"<<endl;	
+           cout<<"1. THE CHRONIC"<<endl<<endl;
+           cout<<"    2. 2001 "<<endl<<endl;
+           
+           cin>>dd;
+           system("CLS");
+           if(dd == 1){
+           	cout<<"DESCIPTION OF ALBUM :-"<<endl<<endl;
+           	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+           	cout<<"SONGS LIST : 13"<<endl<<endl;
+           	cout<<"METRIC SCORE = 9.0"<<endl<<endl;
+           	cout<<"PRICE == 1800 RS"<<endl;
+           	cout<<"TO BUY PRESS 'y' TO GO BACK PRESS 'n'"<<endl;
+           	cin>>sc[2];
+           	system("CLS");
+           	
+           	
+           		if(sc[2]=='y'){
+					cout<<"THANK YOU FOR BUYING"<<endl;
+					cout<<"YOU CAN FIND ALBUM ON ISLE 4th"<<endl;
+					cout<<"PROCEED TO CHECKOUT WITH 1800 RS"<<endl;	
+				}
+				else if(sc[2]=='n'){
+					cout<<"ITS FINE YOU CAN ALWAYS FIND ANOTHER ALBUM"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+				else{
+					cout<<"ERROR DETECTED"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+           	
+		   }
+		   else if(dd == 2){
+		   	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		   	cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl<<endl;
+		   	cout<<"SONGS LIST : 13"<<endl<<endl;
+		   	cout<<"METRIC SCORE = 8.2"<<endl<<endl;
+		   	cout<<"PRICE = 1400 RS"<<endl<<endl;
+		   	cout<<"TO BUY PRESS 'y' TO GO BACK PRESS 'n'"<<endl<<endl;
+		   	cin>>sc[2];
+		   	system("CLS");
+		   	
+		   		if(sc[2]=='y'){
+					cout<<"THANK YOU FOR BUYING"<<endl;
+					cout<<"YOU CAN FIND ALBUM ON ISLE 4th"<<endl;
+					cout<<"PROCEED TO CHECKOUT WITH 1400 RS"<<endl;	
+				}
+				else if(sc[2]=='n'){
+					cout<<"ITS FINE YOU CAN ALWAYS FIND ANOTHER ALBUM"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+				else{
+					cout<<"ERROR DETECTED"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto hiphop;
+				}
+		   }
+           break;
+           
+           default:                           //default case
+           	cout<<"CASE IS ERRORED"<<endl;
+				}
+				
+				
+				
+				
+				
+				
+				
+			}
+int pop(){                                           //pop customer function with default options for customers
+			
+	system("color 37");                                //color changing function used here
+	int popartist;                                     //variable for artists
+	int mj,jb,es;                                       //initials of artists as variables
+	char pop[2]={'y','n'};                           //a little array for yes and no
+	pop:                                          //goto function start of pop
+	cout<<"SELECT ARTIST YOU PREFER"<<endl;
+	cout<<"=======================================================================================================================\n\n"<<endl<<endl;
+	cout<<"1. MICHAEL JACKSON"<<endl<<endl;
+	cout<<"        2. JUSTIN BIEBER"<<endl<<endl;
+	cout<<"                3. ED SHEERAN"<<endl<<endl;	
+	cin>>popartist;
+	system("CLS");
+	switch(popartist){                      //switch case for pop artist
+		case 1:
+			cout<<"ENTER THE ALBUM YOU WANT"<<endl<<endl;
+			cout<<"==================================================================================================================="<<endl<<endl;
+		    cout<<"1. THRILLER"<<endl<<endl;
+		    cout<<"   2. BAD"<<endl<<endl;
+		    cout<<"      3. INVINCIBLE"<<endl<<endl;
+		    cin>>mj;
+		    system("CLS");
+		    if(mj == 1){                          //if mj= 1 as album 1 and so on
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"SONGS LIST : 14"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 8.4"<<endl<<endl;
+		    	cout<<"PRICE = 3300 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 5th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+				
+			}
+				else if(mj == 2){
+					cout<<"\n\n"<<endl;
+						cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+						cout<<"SONGS LIST : 14"<<endl<<endl;
+						cout<<":::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+						cout<<"METRIC SCORE = 7.5"<<endl<<endl;
+						cout<<"PRICE = 2700 RS"<<endl<<endl;
+							cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 5th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+					}	
+						
+					}
+					else if(mj == 3){
+						cout<<"\n\n"<<endl;
+						cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+						cout<<"SONGS LIST : 15. "<<endl;
+						cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n"<<endl<<endl;
+						cout<<"METRIC SCORE = 6.9"<<endl<<endl;
+						cout<<"PRICE = 999 RS"<<endl<<endl;
+										cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 5th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;                                   //goto function for pop genre
+					}	
+						
+						
+					}
+					else {
+				cout<<"\n\n"<<endl;
+				cout<<"ERROR 404"<<endl<<endl;
+				cout<<"ROLLING BACK"<<endl<<endl;
+				system("pause");
+				system("CLS");
+				goto pop;}
+				
+					break;                                           
+					case 2:                                     //case 2 started from here means another artist has begun
+						cout<<"ENTER THE ALBUM YOU WANT"<<endl<<endl;
+						cout<<"==============================================================================================="<<endl<<endl;
+						cout<<"1. MY WORLDS"<<endl<<endl;                   //albums
+						cout<<"   2. CHANGES"<<endl<<endl;
+					    cout<<"     3. JUSTICE"<<endl<<endl;
+					 cin>>jb;
+		    system("CLS");
+		    if(jb == 1){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"SONGS LIST : 15."<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.4"<<endl<<endl;
+		    	cout<<"PRICE = 1300 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+				
+			}
+		  else  if(jb == 2){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 8.4"<<endl<<endl;
+		    	cout<<"YEAR = 2020"<<endl<<endl;
+		    	cout<<"SONGS LIST = 14"<<endl<<endl;
+		    	cout<<"PRICE = 3300 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+				
+			}
+			else  if(jb == 3){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.7"<<endl<<endl;
+		    	cout<<"YEAR = 2021"<<endl<<endl;
+		    	cout<<"SONGS LIST = 15"<<endl<<endl;
+		    	cout<<"PRICE = 1200 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;                                          //goto function again
+	 			}
+				
+			}
+			else {
+				cout<<"\n\n"<<endl;
+				cout<<"ERROR 404"<<endl<<endl;
+				cout<<"ROLLING BACK"<<endl<<endl;
+				system("pause");                             //pausing system function
+				system("CLS");                            //clear screen function
+				goto pop;                                         //goto function
+			}
+			break;
+			case 3:                                         //case 3 has started
+			cout<<"ENTER THE ALBUM YOU WANT"<<endl<<endl;
+			cout<<"====================================================================================================================\n\n"<<endl;		
+		    cout<<"1. +"<<endl<<endl;
+		    cout<<"   2. DIVIDE"<<endl<<endl;
+		    cout<<"      3. NO.6 COLLABORATIONS"<<endl<<endl;
+		     cin>>es;
+		    system("CLS");
+		    if(es == 1){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.9"<<endl<<endl;
+		    	cout<<"SONGS LIST = 13"<<endl<<endl;
+		    	cout<<"PRICE = 1400 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+				
+			}
+			else if(es == 2){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.8"<<endl<<endl;
+		    	cout<<"SONGS LIST = 17"<<endl<<endl;
+		    	cout<<"PRICE = 1400 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+				
+			}
+				else if(es == 3){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.8"<<endl<<endl;
+		    	cout<<"SONGS LIST = 17"<<endl<<endl;
+		    	cout<<"PRICE = 1400 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>pop[2];
+		    	system("CLS");
+		    	if(pop[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 6th"<<endl<<endl;
+				}
+					else if(pop[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto pop;
+				}
+			
+				
+			}	else {
+					
+		cout<<"\n\n"<<endl<<endl;
+	cout<<"ERROR DETECTED LETS ROLL BACK"<<endl; 
+	system("pause");
+	system("CLS");
+	goto pop;			
+		}
+		break;	
+		
+		   default:			
+		cout<<"\n\n"<<endl<<endl;
+	cout<<"ERROR DETECTED LETS ROLL BACK"<<endl<<endl;   
+	system("pause");
+	system("CLS");
+	goto pop;
+	
+				
+	}	
+	
+	
+}
+
+int regional(){                                      //another function for another genre
+	system("color 5e");                             //color changing for terminal function
+		int regartist;                               //variable for regional artists
+	int aa,az;                                  //artists intials as variables
+	char reg[2]={'y','n'};                             //small array again for yes and no
+	regional:                                       //start of regional goto funcion
+	cout<<"SELECT ARTIST YOU PREFER"<<endl;
+	cout<<"=======================================================================================================================\n\n"<<endl<<endl;
+	cout<<"1. ATIF ASLAM"<<endl<<endl;
+	cout<<"        2. ALI ZAFAR"<<endl<<endl;
+	cin>>regartist;
+	system("CLS");                                    //clear screen function
+	switch(regartist){                                        //switch case started
+		case 1:
+			cout<<"ENTER THE ALBUM YOU WANT"<<endl<<endl;
+			cout<<"==================================================================================================================="<<endl<<endl;
+		    cout<<"1. JALPARI"<<endl<<endl;
+		    cout<<"   2. DOORIE"<<endl<<endl;
+		    cout<<"      3. MERI KAHANI"<<endl<<endl;
+		    cin>>aa;
+		    system("CLS");
+		    if(aa == 1){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 8.4"<<endl<<endl;
+		    	cout<<"SONGS LIST = 11"<<endl<<endl;
+		    	cout<<"RELEASE DATE = 17 JULY 2004"<<endl<<endl;
+		    	cout<<"PRICE = 600 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 7th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;                     //goto case for regional
+				}
+	
+}
+ if(aa == 2){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE => 7.8"<<endl<<endl;
+		    	cout<<"SONGS LIST => 18"<<endl<<endl;
+		    	cout<<"RELEASE DATE => 22 DECEMBER 2006"<<endl<<endl;
+		    	cout<<"PRICE => 650 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 7th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;
+				}
+
+}
+ if(aa == 3){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+				cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7.3"<<endl<<endl;
+		    	cout<<"SONGS LIST = 12"<<endl<<endl;
+		    	cout<<"RELEASE DATE = 8 JANUARY 2008"<<endl<<endl;
+		    	cout<<"PRICE = 800 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 7th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;
+				}
+else {
+	cout<<"\n\nERROR OF CHOICE\n"<<endl;
+	cout<<"LETS ROLL bACK"<<endl<<endl;
+	system("pause");
+	system("CLS");
+	goto regional;
+}
+								
+}
+
+break;
+
+case 2:
+	cout<<"ENTER THE ALBUM YOU WANT"<<endl<<endl;
+			cout<<"==================================================================================================================="<<endl<<endl;
+		    cout<<"1. HUQA PANI"<<endl<<endl;
+		    cout<<"   2. MASTY"<<endl<<endl;
+		    cout<<"      3. JHOOM"<<endl<<endl;
+		    cin>>az;
+		    system("CLS");
+		    if(az == 1){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 8.1"<<endl<<endl;
+		    	cout<<"SONGS LIST = 10"<<endl<<endl;
+		    	cout<<"RELEASE DATE = 21 NOVEMBER 2003"<<endl<<endl;
+		    	cout<<"PRICE = 600 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 8th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;
+				}
+}
+ if(az == 2){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 7"<<endl<<endl;
+		    	cout<<"SONGS LIST = 9"<<endl<<endl;
+		    	cout<<"RELEASE DATE = 1 DECEMBER 2006"<<endl<<endl;
+		    	cout<<"PRICE = 600 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 8th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;
+				}
+}
+ if(az == 3){
+		    	cout<<"\n\n"<<endl;
+		    	cout<<"DESCRIPTION OF ALBUM :-"<<endl<<endl;
+		    	cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n\n"<<endl;
+		    	cout<<"METRIC SCORE = 8.1"<<endl<<endl;
+		    	cout<<"SONGS LIST = 12"<<endl<<endl;
+		    	cout<<"RELEASE DATE = 14 FEBURARY 2001"<<endl<<endl;
+		    	cout<<"PRICE = 600 RS"<<endl<<endl;
+		    	cout<<"PRESS 'Y' TO BUY 'N' TO GO BACK"<<endl<<endl;
+		    	cin>>reg[2];
+		    	system("CLS");
+		    	if(reg[2] == 'y'){
+		    		cout<<"\n\n"<<endl;
+		    		cout<<"THANK YOU FOR BUYING THIS ALBUM"<<endl<<endl;
+		    		cout<<"YOU CAN FIND THIS ALBUM ON ISLE 8th"<<endl<<endl;
+				}
+					else if(reg[2] == 'n'){
+						cout<<"\n\n"<<endl;
+		    			cout<<"ITS FINE IF ITS NOT YOUR TYPE. LETS ROLL BACK"<<endl<<endl;
+		    			system("pause");
+		    			system("CLS");
+		    			goto regional;
+				}
+				else{
+					cout<<"\n\nWRONG CHOICE "<<endl<<endl;
+					cout<<"LETS ROLL BACK"<<endl<<endl;
+					system("pause");
+					system("CLS");
+					goto regional;
+				}
+}
+
+
+}
+
+}
+
+void addmusic(){                             //function to add music in admin menu
+
+	int choice;                               
+	cout<<"HOW MUCH NEW DATA YOU WANT TO ADD?"<<endl<<endl;   //asking for how many pieces of datas are wanted to be added
+	cin>>choice;                                                      //entering the choice
+	system("pause");                                              //system pause function
+	system("CLS");                                         //clear screen function
+	fstream file;                                                     //using fstream for both reading and writing files
+	for(int i=total; i<total+choice; i++ ){                           //using for loop to run it again and again
+		cout<<"ENTERING THE DATA OF ARTIST/s "<<i+1<<endl<<endl;
+		cout<<"ENTER GENRE NAME :"<<endl<<endl;
+		cin>>e[i].genre;                                                 //using structure to add genre name
+		cout<<"ENTER ARTIST NAME :"<<endl<<endl;
+		cin>>e[i].artist;                                                 //structure to add artist name
+		cout<<"ENTER THE ALBUM NAME :"<<endl<<endl;
+		cin>>e[i].albumname;                                              //structure to add albumname
+		cout<<"ENTER THE TRACK NUMBERS : "<<endl<<endl;
+		cin>>e[i].tracklist;                                             //structure to add tracklist
+		cout<<"ENTER THE METRIC SCORE FOR ALBUM  :  "<<endl<<endl;
+		cin>>e[i].metricscore;                                           //structure to add metricscore
+		cout<<"ENTER THE PRICE FOR ALBUM  :  "<<endl<<endl;
+		cin>>e[i].price;                                                  //structure to add price
+		cout<<"ENTER THE ISLE NUMBER : "<<endl<<endl;
+		cin>>e[i].isle;                                                  //structure to add isle number
+		
+			file.open("NEW RECORD.txt", ios::app | ios::out);                //opening file to write data using append mode
+file<< "  "<< e[i].genre <<"  "<<e[i].artist<<"  "<<e[i].albumname<<"  "<<e[i].tracklist<<"  "<<e[i].metricscore<<"  "<<e[i].price<<"  "<<e[i].isle<< "  \n\n";
+//writing data on the file as a pattern
+	file.close();
+	//closed the file for good
+	
+	}
+	total=total+choice;                  //condition for ,for loop
+system("pause");
+system("CLS");
+}
+
+void displayinfo(){                                       //function to display all data recorded
+system("CLS"); 
+int i=total;                                             //initializing as total
+fstream file;                                            //using fstream for both reading and writing and initializing file
+cout<<"\t\t\t\nDISPLAY RECORD"<<endl<<endl;
+cout<<"---------------------------------------------------------------------"<<endl<<endl;
+file.open("NEW RECORD.txt",ios::in);              //opening file named NEW RECORD.txt
+file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;  //fetching data from the file created above
+	while(!file.eof()){            //using while function and giving condition for if not end of file
+		cout<<"GENRE :  "<<e[i].genre<<endl<<endl;                    //structure for genre
+		cout<<"ARTIST NAME  :  "<<e[i].artist<<endl<<endl;                 //struture for artist name
+		cout<<"ALBUM NAME  :  "<<e[i].albumname<<endl<<endl;                //structure for album name 
+		cout<<"TRACK LIST  :  "<<e[i].tracklist<<endl<<endl;                 //structure for tracklist
+		cout<<"METRIC SCORE  :  "<<e[i].metricscore<<endl<<endl;         //structure for metric score
+		cout<<"PRICE   :  "<<e[i].price<<endl<<endl;                      //struccture for the price
+		cout<<"ISLE NUMBER  :  "<<e[i].isle<<endl<<endl;                   //structure data for isle number
+		cout<<"----------------------------------------------------------------------------"<<endl<<endl;
+		file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;  //fetching data
+	}
+	file.close();                                                  //closing file NEW RECORD.txt
+	system("pause");                                                
+	system("CLS");
+}
+
+void search(){                                      //function for searching record
+	int i=total;                                                                   
+          system("CLS");
+          cout<<"\n\n\t\t SEARCH RECORD\n\n"<<endl;
+          cout<<"----------------------------------------------------------------"<<endl<<endl;
+          fstream file;                                //using fstream for both reading and writing
+          	int islenum,found=0;                              //creating 2 variables
+          file.open("NEW RECORD.txt",ios::in);                //opening our created file and to fetch ios::in
+          if(!file){                                          //condition if file isnt present
+          	cout<<"FILE NOT FOUND"<<endl<<endl;             //file not found
+		  }
+		  else{
+		  	cout<<"\n\nENTER ISLE NUMBER FOR SEARCH --->    ";
+		  	cin>>islenum;
+		  	file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;
+		  	//again fetching data from opened file
+	while(!file.eof()){                                          //using same while loop and same condition
+		if(islenum == e[i].isle){                               //condition if given variable is equal to the isle number saved in structure 
+		system("CLS");
+		cout<<"\n\n\t\t SEARCHED RECORD BELOW  "<<endl;
+		cout<<"GENRE :  "<<e[i].genre<<endl<<endl;                      //structure data for genre
+		cout<<"ARTIST NAME  :  "<<e[i].artist<<endl<<endl;                //structure data for artist name
+		cout<<"ALBUM NAME  :  "<<e[i].albumname<<endl<<endl;             //structure data for albumname
+		cout<<"TRACK LIST  :  "<<e[i].tracklist<<endl<<endl;            //structure data for track list
+		cout<<"METRIC SCORE  :  "<<e[i].metricscore<<endl<<endl;         //structure data for metric score
+		cout<<"ISLE NUMBER  :  "<<e[i].isle<<endl<<endl;                   //structure data for isle number
+		cout<<"----------------------------------------------------------------------------"<<endl<<endl;
+		found++;      //incrementing }
+		file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;    //fetching data from our opened file
+	}
+	file.close();                                  //closing the file
+	system("pause");
+	system("CLS");
+		  	 }
+			   }
+		}
+		  
+
+void deleteinfo(){
+system("CLS");
+int i=total;
+int del_id,found=0;
+fstream file,file1;
+cout<<"\n\n\t\t DELETE RECORD  "<<endl<<endl;
+cout<<"--------------------------------------------------------------"<<endl<<endl;
+file.open("NEW RECORD.txt",ios::in);
+if(!file){
+	cout<<"\n\n\t\t FILE NOt FOUND..."<<endl<<endl;
+	getch();
+}
+else {
+     cout<<"ENTER ISlE NUMBER TO DELETE DATA.."<<endl<<endl;
+     cin>>del_id;
+     file1.open("NEW RECORD1.txt",ios::app | ios::out);
+     file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;
+     while(!file.eof()){
+     	if(del_id==e[i].isle){
+     		cout<<"RECORD DELETED SUCCESSFULLY..."<<endl<<endl;
+     		
+     		found++;
+		 }
+		 else{
+		 	file1<< "  "<< e[i].genre <<"  "<<e[i].artist<<"  "<<e[i].albumname<<"  "<<e[i].tracklist<<"  "<<e[i].metricscore<<"  "<<e[i].price<<"  "<<e[i].isle<< "  \n\n";
+		 }
+		 file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;
+	 }
+   	file.close();
+   	file1.close();
+   	remove("NEW RECORD.txt");
+   	rename("NEW RECORD1.txt","NEW RECORD.txt");
+   	
+   }
+}
+
+
+void updated(){  
+	int buying;
+	char upd[2]={'y','n'};
+		int i=total;
+          system("CLS");
+          cout<<"\n\n\t\t SEARCH ISLE NUMBER YOU WANT TO BUY\n\n"<<endl;
+          cout<<"----------------------------------------------------------------"<<endl<<endl;
+          fstream file;
+          	int islenum,found=0;
+          file.open("NEW RECORD.txt",ios::in);
+          if(!file){
+          	cout<<"FILE NOT FOUND"<<endl<<endl;
+		  }
+		  else{
+		  	cout<<"\n\nENTER ISLE NUMBER FOR SEARCH FROM (1 to 20) --->    ";
+		  	cin>>islenum;
+		  	if(islenum!=e[i].isle){
+			  
+		  	file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;
+	while(!file.eof()){
+		if(islenum == e[i].isle){
+		system("CLS");
+		cout<<"\n\n\t\t SEARCHED RECORD BELOW  "<<endl;
+		cout<<"GENRE :  "<<e[i].genre<<endl<<endl;
+		cout<<"ARTIST NAME  :  "<<e[i].artist<<endl<<endl;
+		cout<<"ALBUM NAME  :  "<<e[i].albumname<<endl<<endl;
+		cout<<"TRACK LIST  :  "<<e[i].tracklist<<endl<<endl;
+		cout<<"METRIC SCORE  :  "<<e[i].metricscore<<endl<<endl;
+		cout<<"ISLE NUMBER  :  "<<e[i].isle<<endl<<endl;
+		cout<<"----------------------------------------------------------------------------"<<endl<<endl;
+		found++;}
+		file>>e[i].genre>>e[i].artist>>e[i].albumname>>e[i].tracklist>>e[i].metricscore>>e[i].price>>e[i].isle;
+	}
+	cout<<"--------------------------------------------------------------------------------------"<<endl<<endl;
+	
+	cout<<"IF YOU WANT TO BUY "<<islenum<<"  PRESS 'y' IF NOT PRESS 'n'  "<<endl<<endl;
+	cin>>upd[2];
+	if(upd[2]=='y'){
+		cout<<"-----------------------------------------------------------"<<endl<<endl;
+		cout<<"THANK YOU FOR BUYING THIS ALBUM FROM  "<<islenum<<"  "<<endl;
+		cout<<"PLEASE PROCEED TO CHECKOUT"<<endl<<endl;
+	}
+	else if(upd[2]=='n'){
+		cout<<"\n\n\n\t\tITS FINE YOU CAN FIND ANOTHER ALBUM....."<<endl<<endl;
+	    	
+	}}
+	else if(islenum==e[i].isle){
+		cout<<"NOTHING ON THIS ISLE KINDLY TRY AGAIN..."<<endl<<endl;
+	}
+	file.close();
+	system("pause");
+	system("CLS");
+		  	 }
+           }  
+		    
+int main(){
+int genre;
+int shop;
+string passcode;
+int addel;
+adminpage:
+system("color f0");
+
+cout<<"\t\t\t\tW E L C O M E    T O   M U S I C S T O R E"<<endl<<endl;
+cout<<"CREATED BY : \n 1- SARMAD MURTAZA \n 2- HASNAIN ABBAS "<<endl<<endl;
+cout<<"========================================================================================================================"<<endl;
+cout<<"::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::"<<endl;
+cout<<"========================================================================================================================\n"<<endl<<endl;
+cout<<"                                        1. Administrator\n"<<endl<<endl;
+cout<<"                                        2. Customer\n\n"<<endl<<endl;
+cin>>shop;
+system("CLS");
+system("color 70");
+if(shop == 1){
+	cout<<"\tENCRYPTED SECTION ENTER PASSCODE :-"<<endl<<endl;
+	cin>>passcode;
+	system("CLS");
+	 if(passcode == "admin" ){
+		char user;
+		system("CLS");
+		while(1){
+		shop:
+		cout<<"\t\tWELCOME TO SHOPKEEPER SECTION"<<endl<<endl;
+		cout<<"1. ADD NEW MUSIC"<<endl<<endl;
+		cout<<"2. DISPLAY NEW INFO."<<endl<<endl;
+		cout<<"3. DELETE RECORDS AND INFO"<<endl<<endl;
+		cout<<"4. SEARCH"<<endl<<endl;
+		cout<<"5. EXIT"<<endl<<endl;
+		user=getch();
+		
+			
+		switch(user){
+			case '1':{
+				addmusic();
+				break;
+			case '2':
+				displayinfo();
+				break;
+			case '3':
+				deleteinfo();
+				break;
+			case '4':
+				search();
+				break;
+			case '5':
+				system("CLS");
+				goto adminpage;
+				break;
+			default:
+				cout<<"WRONG CHOICE"<<endl<<endl;
+			}			
+			
+		}
+	  }
+	}
+	else{
+	cout<<"\t\t\t\n\nINVALID PASSCODE"<<endl;}
+	system("pause");
+	system("CLS");
+	goto adminpage;
+}
+else if(shop == 2){
+	system("color 4f");
+	home: // Function Decleration
+	cout<<"\n\n ENTER THE GENRE YOU WANT:"<<endl<<endl;
+	cout<<"===================================================================================================================\n"<<endl;
+cout<<"1. HIP-HOP/Rap"<<endl<<endl;
+cout<<"       2. POP MUSIC"<<endl<<endl;
+cout<<"            3.REGIONAL MUSIC"<<endl<<endl;
+cout<<"                4. UPDATED AND NEW MUSIC"<<endl<<endl;
+cout<<"                     5. EXIT"<<endl<<endl;
+cin>>genre;
+system("CLS");
+switch(genre){
+    case 1:
+    {
+        hiphop();
+        break;
+    case 2:
+    	pop();
+    	break;
+    case 3:
+	     regional();
+		 break;	
+    case 4:
+	     updated();
+	break;	
+    case 5:
+    	system("CLS");
+	    goto adminpage;	
+    	break;
+	default:
+	cout<<"\n\nWE HAVE DETECTED AN ERROR KINDLY TRY AGAIN"<<endl<<endl;	
+        }
+}
+cout<<"\n\nYOU ARE IMMEDIATELY GOING BACK ON CUSTOMER HOMEPAGE.\n"<<endl;
+system ("pause");
+system("CLS");
+goto home;
+ }
+}
